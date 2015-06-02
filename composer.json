@@ -13,11 +13,15 @@
     ],
     "require": {
         "silex/silex": "2.0.*@dev",
-        "symfony/yaml": "~2.6"
+        "symfony/yaml": "~2.6",
+        "symfony/config": "~2.6",
+        "symfony/security": "~2.6",
+        "symfony/console": "~2.6",
+        "userbase/client": "~0.0"
     },
     "autoload": {
         "psr-4": {
-            "LinkORBSkeleton\\": "src/"
+            "LinkORB\\Skeleton\\": "src/"
         }
     }
 }

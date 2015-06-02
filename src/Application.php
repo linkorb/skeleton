@@ -1,6 +1,6 @@
 <?php
 
-namespace LinkORBSkeleton;
+namespace LinkORB\Skeleton;
 
 use Silex\Application as SilexApplication;
 use Silex\Provider\TwigServiceProvider;
@@ -21,7 +21,7 @@ class Application extends SilexApplication
         $this->configureService();
         $this->configureRoutes();
         $this->configureTemplateEngine();
-        $this->configureSecurity();
+        // $this->configureSecurity();
     }
 
     private function getConfigFromParameters()
@@ -87,12 +87,12 @@ class Application extends SilexApplication
         $parameters = $this->getConfigFromParameters();
         foreach ($parameters['security']['providers'] as $provider => $providerConfig) {
             switch ($provider) {
-                case 'JsonFile':
-                    return new \Herald\Server\Security\JsonFileUserProvider(__DIR__.'/../'.$providerConfig['path']);
-                case 'Pdo':
-                    $dbmanager = new DatabaseManager();
-
-                    return new \Herald\Server\Security\PdoUserProvider($dbmanager->getPdo($providerConfig['database']));
+                // case 'JsonFile':
+                //     return new \LinkORB\Skeleton\Security\JsonFileUserProvider(__DIR__.'/../'.$providerConfig['path']);
+                // case 'Pdo':
+                //     $dbmanager = new DatabaseManager();
+                //
+                //     return new \LinkORB\Skeleton\Security\PdoUserProvider($dbmanager->getPdo($providerConfig['database']));
                 case 'UserBase':
                     return new \UserBase\Client\UserProvider(
                         new \UserBase\Client\Client(

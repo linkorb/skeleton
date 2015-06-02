@@ -1,6 +1,6 @@
 <?php
 
-namespace Herald\Server\Controller;
+namespace LinkORB\Skeleton\Controller;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;

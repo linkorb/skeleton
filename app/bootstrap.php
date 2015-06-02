@@ -1,6 +1,6 @@
 <?php
 
-use LinkORBSkeleton\Application;
+use LinkORB\Skeleton\Application;
 
 use Symfony\Component\HttpFoundation\Request;
 
