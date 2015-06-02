@@ -55,7 +55,7 @@ class Application extends SilexApplication
     {
         $this->register(new TwigServiceProvider(), array(
             'twig.path' => array(
-                __DIR__.'/Resources/views/',
+                __DIR__.'/../templates/',
             ),
         ));
     }

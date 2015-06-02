@@ -10,6 +10,8 @@ class ExampleController
 {
     public function indexAction(Application $app, Request $request)
     {
-        return new Response('Cool');
+        return new Response($app['twig']->render(
+            'index.html.twig'
+        ));
     }
 }

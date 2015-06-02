@@ -17,6 +17,7 @@
         "symfony/config": "~2.6",
         "symfony/security": "~2.6",
         "symfony/console": "~2.6",
+        "twig/twig": "2.0.*@dev",
         "userbase/client": "~0.0"
     },
     "autoload": {
