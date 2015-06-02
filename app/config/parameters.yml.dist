@@ -1,0 +1,10 @@
+baseurl: /skeleton
+security:
+    # encoder: PlaintextPasswordEncoder
+    providers:
+        # JsonFile: { path: app/config/security.json }
+        # Pdo: { database: database_name }
+        UserBase:
+            url: userbase_api_url
+            username: userbase_username
+            password: userbase_password

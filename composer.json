@@ -1,0 +1,23 @@
+{
+    "name": "linkorb/skeleton",
+    "description": "LinkORB Skeleton: The LinkORB project template",
+    "homepage": "https://github.com/linkorb/skeleton",
+    "keywords": ["linkorb", "template", "project", "php", "skeleton"],
+    "type": "application",
+    "authors": [
+        {
+            "name": "LinkORB",
+            "email": "development@linkorb.com",
+            "role": "Development"
+        }
+    ],
+    "require": {
+        "silex/silex": "2.0.*@dev",
+        "symfony/yaml": "~2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "LinkORBSkeleton\\": "src/"
+        }
+    }
+}
