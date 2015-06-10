@@ -36,8 +36,11 @@ class Application extends SilexApplication
 
     private function configureParameters()
     {
-        $this['debug'] = true;
-        $this->getConfigFromParameters();
+        $this['debug'] = false;
+        $parameters = $this->getConfigFromParameters();
+        if (isset($parameters['debug'])) {
+            $this['debug'] = !!$parameters['debug'];
+        }
     }
 
     private function configureService()

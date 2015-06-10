@@ -1,3 +1,4 @@
+debug: false
 baseurl: /skeleton
 security:
     # encoder: PlaintextPasswordEncoder
