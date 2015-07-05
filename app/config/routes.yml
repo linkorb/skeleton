@@ -1,3 +1,12 @@
-index:
+frontpage:
     path: /
-    defaults:  { _controller: LinkORB\Skeleton\Controller\ExampleController::indexAction }
+    defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::frontpageAction }
+
+
+things_index:
+    path: /things
+    defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::indexAction }
+
+things_view:
+    path: /things/{thingId}
+    defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::viewAction }

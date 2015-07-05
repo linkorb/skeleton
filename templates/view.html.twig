@@ -1,0 +1,14 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h1>Thing ({{thing.getId()}})</h1>
+    
+    ID: {{thing.getId}}<br />
+    Name: {{thing.getName}}<br />
+    Description: {{thing.getDescription}}<br />
+    
+    <div class="buttonbox">
+        <a href="{{ path('things_index' )}}" class="btn btn-default">Back</a>
+    </div>
+    
+{% endblock %}

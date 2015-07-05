@@ -5,22 +5,30 @@ namespace LinkORB\Skeleton;
 use Silex\Application as SilexApplication;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\SecurityServiceProvider as SilexSecurityServiceProvider;
+use Silex\Provider\RoutingServiceProvider;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Yaml\Parser as YamlParser;
 use LinkORB\Component\DatabaseManager\DatabaseManager;
+use LinkORB\Skeleton\Repository\PdoThingRepository;
 use RuntimeException;
+use PDO;
 
 class Application extends SilexApplication
 {
+    private $pdo;
+    
     public function __construct(array $values = array())
     {
         parent::__construct($values);
 
         $this->configureParameters();
+        $this->configurePdo();
         $this->configureService();
+        $this->configureRepositories();
         $this->configureRoutes();
         $this->configureTemplateEngine();
+        
         // $this->configureSecurity();
     }
 
@@ -42,9 +50,26 @@ class Application extends SilexApplication
             $this['debug'] = !!$parameters['debug'];
         }
     }
+    
+    private function configurePdo()
+    {
+        if (!isset($this['parameters']['pdo'])) {
+            throw new RuntimeException("Missing required PDO configuration");
+        }
+        $url = $this['parameters']['pdo'];
+        $scheme = parse_url($url, PHP_URL_SCHEME);
+        $user = parse_url($url, PHP_URL_USER);
+        $pass = parse_url($url, PHP_URL_PASS);
+        $host = parse_url($url, PHP_URL_HOST);
+        $dbname = parse_url($url, PHP_URL_PATH);
+        
+        $dsn = $scheme . ':dbname=' . substr($dbname, 1) . ';host=' . $host;
+        $this->pdo = new PDO($dsn, $user, $pass);
+    }
 
     private function configureService()
     {
+        $this->register(new RoutingServiceProvider());
     }
 
     private function configureRoutes()
@@ -109,5 +134,16 @@ class Application extends SilexApplication
             }
         }
         throw new RuntimeException('Cannot find any security provider');
+    }
+    
+    private $thingRepository;
+    private function configureRepositories()
+    {
+        $this->thingRepository = new PdoThingRepository($this->pdo);
+    }
+    
+    public function getThingRepository()
+    {
+        return $this->thingRepository;
     }
 }
