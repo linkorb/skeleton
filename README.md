@@ -19,6 +19,26 @@ cp app/config/security.yml.dist app/config/security.yml
 ```
 Now edit `app/config/parameters.yml` and `app/config/security.yml` to your situation
 
+### Initializing database schema
+
+The database schema is defined in `app/schema.xml`. You can load this schema in your database 
+using [DBTK Schema Loader](https://github.com/dbtk/schema-loader) (view it's README.md for more information)
+
+Note: Create the database before loading the schema.
+
+```
+vendor/bin/dbtk-schema-loader schema:load app/schema.xml mysql://username:password@localhost/skeleton
+```
+
+### Loading example data / fixtures
+
+After initializing the database schema, you can load it with some example data through
+[linkorb/haigha](https://github.com/linkorb/haigha) (View Haigha's README.md for further information):
+
+```
+vendor/bin/haigha fixtures:load test/fixture/example-data.yml mysql://username:password@localhost/skeleton
+```
+
 ### Start the server
 
 ```
@@ -50,4 +70,3 @@ If you need any further information, be sure to <a href="http://engineering.link
 
 Have fun!  
 *The LinkORB Engineering Team*
-

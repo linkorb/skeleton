@@ -20,6 +20,12 @@
         "twig/twig": "2.0.*@dev",
         "userbase/client": "~0.0"
     },
+    "require-dev": {
+        "dbtk/schema-loader": "~1.0",
+        "linkorb/database-manager": "dev-master",
+        "nelmio/alice": "dev-master",
+        "linkorb/haigha": "~1.0"
+    },
     "autoload": {
         "psr-4": {
             "LinkORB\\Skeleton\\": "src/"

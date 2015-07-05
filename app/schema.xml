@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+    <table name="thing">
+        <column name="id" type="int" />
+        <column name="name" type="varchar(64)" />
+        <column name="description" type="text" />
+    </table>
+</schema>
