@@ -17,6 +17,8 @@
         "symfony/config": "~2.6",
         "symfony/security": "~2.6",
         "symfony/console": "~2.6",
+        "symfony/form": "~2.7",
+        "symfony/translation": "~2.7",
         "twig/twig": ">=1.8,<2.0-dev",
         "symfony/twig-bridge": "~2.7",
         "userbase/client": "~0.0"

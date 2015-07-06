@@ -2,11 +2,19 @@ frontpage:
     path: /
     defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::frontpageAction }
 
-
 things_index:
     path: /things
     defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::indexAction }
 
+things_add:
+    path: /things/add
+    defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::addAction }
 things_view:
     path: /things/{thingId}
     defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::viewAction }
+things_edit:
+    path: /things/{thingId}/edit
+    defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::editAction }
+things_delete:
+    path: /things/{thingId}/delete
+    defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::deleteAction }

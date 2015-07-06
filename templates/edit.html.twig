@@ -1,0 +1,35 @@
+{% extends "layout.html.twig" %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% block content %}
+<h1>Edit thing</h1>
+
+{% if error != null %}
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation-circle"></i>
+        Error adding thing
+    </div>
+{% endif %}
+
+<form action="#" method="post" >
+    {{ form_widget(form) }}
+
+    <div class="buttonbox">
+        <button type="submit" class="btn btn-success">
+            <i class="fa fa-server"></i>
+            Save
+        </button>
+        <a href="{{ path('things_index') }}" class="btn btn-default" role="button">
+            <i class="fa fa-arrow-left"></i>
+            Back
+        </a>
+        {% if thing != null %}
+        <a href="{{ path('things_delete', {'thingId': thing.getId()}) }}"
+         class="btn btn-danger" role="button" onclick="return confirm('Are you sure?')">
+            <i class="fa fa-trash"></i>
+            Delete
+        </a>
+        {% endif %}
+    </div>
+</form>
+{% endblock %}

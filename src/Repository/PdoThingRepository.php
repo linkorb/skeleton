@@ -8,12 +8,12 @@ use PDO;
 class PdoThingRepository
 {
     private $pdo;
-    
+
     public function __construct(PDO $pdo)
     {
         $this->pdo = $pdo;
     }
-    
+
     public function getById($id)
     {
         $statement = $this->pdo->prepare(
@@ -23,10 +23,10 @@ class PdoThingRepository
             LIMIT 1"
         );
         $statement->execute(array(
-            'id' => $id
+            'id' => $id,
         ));
         $row = $statement->fetch();
-        return $this->rowToObject($row);
+        return $row ? $this->rowToObject($row) : null;
     }
 
     public function getByName($name)
@@ -41,14 +41,14 @@ class PdoThingRepository
             'name' => $name
         ));
         $row = $statement->fetch();
-        return $this->rowToObject($row);
+
+        return $row ? $this->rowToObject($row) : null;
     }
-    
+
     public function getAll()
     {
         $statement = $this->pdo->prepare(
-            "SELECT *
-            FROM thing"
+            "SELECT * FROM thing"
         );
         $statement->execute();
         $rows = $statement->fetchAll();
@@ -56,24 +56,52 @@ class PdoThingRepository
         foreach ($rows as $row) {
             $objects[] = $this->rowToObject($row);
         }
+
         return $objects;
     }
-    
+
+    public function add(Thing $thing)
+    {
+        $statement = $this->pdo->prepare(
+            'INSERT INTO thing () VALUES ()'
+        );
+        $statement->execute();
+        $thing->setId($this->pdo->lastInsertId());
+        $this->update($thing);
+
+        return true;
+    }
+
+    public function update(Thing $thing)
+    {
+        $statement = $this->pdo->prepare(
+            "UPDATE thing
+             SET name=:name, email=:email, description=:description
+             WHERE id=:id"
+        );
+        $statement->execute(
+            [
+                'id' => $thing->getId(),
+                'name' => $thing->getName(),
+                'email' => $thing->getEmail(),
+                'description' => $thing->getDescription(),
+            ]
+        );
+
+        return $thing;
+    }
+
     private function rowToObject($row)
     {
         if (!$row) {
             return null;
         }
         $obj = new Thing();
-        $obj->setId($row['id']);
-        $obj->setName($row['name']);
-        $obj->setDescription($row['description']);
-        
-        /*
-        $obj->setPictureUrl($row['picture_url']);
-        $obj->setCreatedAt($row['created_at']);
-        $obj->setDeletedAt($row['deleted_at']);
-        */
+        $obj->setId($row['id'])
+            ->setName($row['name'])
+            ->setEmail($row['email'])
+            ->setDescription($row['description']);
+
         return $obj;
     }
 }

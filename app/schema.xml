@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema>
-    <table name="thing">
-        <column name="id" type="int" />
+    <table name="thing" primaryKey="id">
+        <column name="id" type="int" autoincrement="true"/>
         <column name="name" type="varchar(64)" />
         <column name="email" type="varchar(64)" />
         <column name="description" type="text" />

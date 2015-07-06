@@ -6,6 +6,8 @@ use Silex\Application as SilexApplication;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\SecurityServiceProvider as SilexSecurityServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
+use Silex\Provider\FormServiceProvider;
+use Silex\Provider\TranslationServiceProvider;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Yaml\Parser as YamlParser;
@@ -70,6 +72,14 @@ class Application extends SilexApplication
     private function configureService()
     {
         $this->register(new RoutingServiceProvider());
+
+        // the form service
+        $this->register(new TranslationServiceProvider(), array(
+              'locale' => 'en',
+              'translation.class_path' =>  __DIR__.'/../vendor/symfony/src',
+              'translator.messages' => array(),
+        ));
+        $this->register(new FormServiceProvider());
     }
 
     private function configureRoutes()
