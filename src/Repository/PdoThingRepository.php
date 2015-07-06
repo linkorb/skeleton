@@ -91,6 +91,18 @@ class PdoThingRepository
         return $thing;
     }
 
+    public function delete(Thing $thing)
+    {
+        $statement = $this->pdo->prepare(
+            "DELETE FROM thing WHERE id=:id"
+        );
+        $statement->execute(
+            [
+                'id' => $thing->getId(),
+            ]
+        );
+    }
+
     private function rowToObject($row)
     {
         if (!$row) {

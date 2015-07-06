@@ -52,6 +52,17 @@ class ThingController
         return $this->getThingEditForm($app, $request, null);
     }
 
+    public function deleteAction(Application $app, Request $request, $thingId)
+    {
+        $repo = $app->getThingRepository();
+        $thing = $repo->getById($thingId);
+        $repo->delete($thing);
+
+        return $app->redirect(
+            $app['url_generator']->generate('things_index')
+        );
+    }
+
     private function getThingEditForm(Application $app, Request $request, $thingId)
     {
         $error = $request->query->get('error');
