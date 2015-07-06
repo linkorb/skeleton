@@ -17,7 +17,7 @@ use PDO;
 class Application extends SilexApplication
 {
     private $pdo;
-    
+
     public function __construct(array $values = array())
     {
         parent::__construct($values);
@@ -28,7 +28,7 @@ class Application extends SilexApplication
         $this->configureRepositories();
         $this->configureRoutes();
         $this->configureTemplateEngine();
-        
+
         // $this->configureSecurity();
     }
 
@@ -50,7 +50,7 @@ class Application extends SilexApplication
             $this['debug'] = !!$parameters['debug'];
         }
     }
-    
+
     private function configurePdo()
     {
         if (!isset($this['parameters']['pdo'])) {
@@ -62,7 +62,7 @@ class Application extends SilexApplication
         $pass = parse_url($url, PHP_URL_PASS);
         $host = parse_url($url, PHP_URL_HOST);
         $dbname = parse_url($url, PHP_URL_PATH);
-        
+
         $dsn = $scheme . ':dbname=' . substr($dbname, 1) . ';host=' . $host;
         $this->pdo = new PDO($dsn, $user, $pass);
     }
@@ -116,11 +116,13 @@ class Application extends SilexApplication
         foreach ($parameters['security']['providers'] as $provider => $providerConfig) {
             switch ($provider) {
                 // case 'JsonFile':
-                //     return new \LinkORB\Skeleton\Security\JsonFileUserProvider(__DIR__.'/../'.$providerConfig['path']);
+                // return new \LinkORB\Skeleton\Security\JsonFileUserProvider(__DIR__.'/../'.$providerConfig['path']);
                 // case 'Pdo':
                 //     $dbmanager = new DatabaseManager();
                 //
-                //     return new \LinkORB\Skeleton\Security\PdoUserProvider($dbmanager->getPdo($providerConfig['database']));
+                // return new \LinkORB\Skeleton\Security\PdoUserProvider(
+                //     $dbmanager->getPdo($providerConfig['database'])
+                // );
                 case 'UserBase':
                     return new \UserBase\Client\UserProvider(
                         new \UserBase\Client\Client(
@@ -135,13 +137,13 @@ class Application extends SilexApplication
         }
         throw new RuntimeException('Cannot find any security provider');
     }
-    
+
     private $thingRepository;
     private function configureRepositories()
     {
         $this->thingRepository = new PdoThingRepository($this->pdo);
     }
-    
+
     public function getThingRepository()
     {
         return $this->thingRepository;

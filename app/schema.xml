@@ -3,6 +3,7 @@
     <table name="thing">
         <column name="id" type="int" />
         <column name="name" type="varchar(64)" />
+        <column name="email" type="varchar(64)" />
         <column name="description" type="text" />
     </table>
 </schema>
