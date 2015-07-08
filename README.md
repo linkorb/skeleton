@@ -27,7 +27,7 @@ using [DBTK Schema Loader](https://github.com/dbtk/schema-loader) (view it's REA
 Note: Create the database before loading the schema.
 
 ```
-vendor/bin/dbtk-schema-loader schema:load app/schema.xml mysql://username:password@localhost/skeleton
+vendor/bin/dbtk-schema-loader schema:load app/schema.xml mysql://username:password@localhost/dbname
 ```
 
 ### Loading example data / fixtures
@@ -36,7 +36,7 @@ After initializing the database schema, you can load it with some example data t
 [linkorb/haigha](https://github.com/linkorb/haigha) (View Haigha's README.md for further information):
 
 ```
-vendor/bin/haigha fixtures:load test/fixture/example-data.yml mysql://username:password@localhost/skeleton
+vendor/bin/haigha fixtures:load test/fixture/example-data.yml mysql://username:password@localhost/dbname
 ```
 
 ### Start the server
@@ -70,3 +70,13 @@ If you need any further information, be sure to <a href="http://engineering.link
 
 Have fun!  
 *The LinkORB Engineering Team*
+
+## License
+Please refer to the included LICENSE file
+
+## Brought to you by the LinkORB Engineering team
+
+<img src="http://www.linkorb.com/d/meta/tier1/images/linkorbengineering-logo.png" width="200px" /><br />
+Check out our other projects at [engineering.linkorb.com](http://engineering.linkorb.com).
+
+Btw, we're hiring!
