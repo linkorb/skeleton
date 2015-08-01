@@ -51,6 +51,17 @@ class Application extends SilexApplication
         if (isset($parameters['debug'])) {
             $this['debug'] = !!$parameters['debug'];
         }
+        $themePath = __DIR__ . '/../themes/default';
+        if (isset($parameters['themePath'])) {
+            $themePath = $parameters['themePath'];
+            if ($themePath[0]!='/') {
+                $themePath = __DIR__ . '/../' .  $themePath;
+            }
+            if (!file_exists($themePath)) {
+                throw new RuntimeException('themePath invalid: ' . $themePath);
+            }
+        }
+        $this['themePath'] = $themePath;
     }
 
     private function configurePdo()
@@ -101,6 +112,10 @@ class Application extends SilexApplication
                 __DIR__.'/../templates/',
             ),
         ));
+        $this['twig.loader.filesystem']->addPath(
+            $this['themePath'],
+            'Theme'
+        );
     }
 
     private function configureSecurity()
