@@ -2,6 +2,7 @@ frontpage:
     path: /
     defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::frontpageAction }
 
+
 # Authentication
 login:
     path: /login
@@ -16,6 +17,12 @@ assets_style_css:
     path: /assets/style.css
     defaults:  { _controller: LinkORB\Skeleton\Controller\AssetsController::styleAction }
 
+assets:
+    path: /assets/{postfix}
+    defaults: { _controller: LinkORB\Skeleton\Controller\AssetsController::serveAction }
+    requirements:
+        postfix: .+
+        
 # CRUD example
 things_index:
     path: /things
