@@ -9,6 +9,10 @@
     
     <div class="buttonbox">
         <a href="{{ path('things_index' )}}" class="btn btn-default">Back</a>
+        <a href="{{ path('things_edit', {'thingId': thing.getId()}) }}" class="btn btn-primary" role="button">
+            <i class="fa fa-edit"></i>
+            Edit
+        </a>
     </div>
     
 {% endblock %}

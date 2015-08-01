@@ -7,10 +7,6 @@
         {% for thing in things %}
         <li>
             <a href="{{ path("things_view", {"thingId": thing.getId() })}}">#{{ thing.id }}: {{ thing.name }}</a>
-            <a href="{{ path('things_edit', {'thingId': thing.getId()}) }}" class="btn btn-primary" role="button">
-                <i class="fa fa-edit"></i>
-                Edit
-            </a>
             <br />
             <i>{{thing.description}}</i>
         </li>
