@@ -24,7 +24,7 @@ class ThingController
         $data = array();
         $data['things'] = $things;
         return new Response($app['twig']->render(
-            'index.html.twig',
+            'things/index.html.twig',
             $data
         ));
     }
@@ -37,7 +37,7 @@ class ThingController
         $data = array();
         $data['thing'] = $thing;
         return new Response($app['twig']->render(
-            'view.html.twig',
+            'things/view.html.twig',
             $data
         ));
     }
@@ -115,7 +115,7 @@ class ThingController
         }
 
         return new Response($app['twig']->render(
-            'edit.html.twig',
+            'things/edit.html.twig',
             [
                 'form' => $form->createView(),
                 'thing' => $thing,
