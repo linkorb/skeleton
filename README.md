@@ -6,8 +6,20 @@ This repository can be used to start new simple projects like API's or webapps.
 ## Getting started
 
 ### Install dependencies:
+
+Get PHP dependencies using Composer
 ```
 composer install
+```
+
+Get javascript dependencies using BowerPHP:
+
+```
+vendor/bin/bowerphp install
+```
+or use the standard bower npm app:
+```
+bower install
 ```
 
 ### Configuration

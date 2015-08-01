@@ -1,13 +1,9 @@
 # Parameters
 /app/config/parameters.yml
-/app/config/parameters.ini
 
 # Managed by Composer
 /vendor/
-
-# Assets and user uploads
-/web/bundles/
-/web/uploads/
+/assets/bower/
 
 # Composer PHAR
 /composer.phar

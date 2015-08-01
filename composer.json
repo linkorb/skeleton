@@ -28,7 +28,8 @@
         "dbtk/schema-loader": "~1.0",
         "linkorb/database-manager": "dev-master",
         "nelmio/alice": "dev-master",
-        "linkorb/haigha": "~1.0"
+        "linkorb/haigha": "~1.0",
+        "beelab/bowerphp": "0.3.*@beta"
     },
     "autoload": {
         "psr-4": {
