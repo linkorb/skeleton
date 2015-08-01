@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Yaml\Parser as YamlParser;
 use LinkORB\Component\DatabaseManager\DatabaseManager;
 use LinkORB\Skeleton\Repository\PdoThingRepository;
+use Silex\Provider\SessionServiceProvider;
 use RuntimeException;
 use PDO;
 
@@ -30,8 +31,7 @@ class Application extends SilexApplication
         $this->configureRepositories();
         $this->configureRoutes();
         $this->configureTemplateEngine();
-
-        // $this->configureSecurity();
+        $this->configureSecurity();
     }
 
     private function getConfigFromParameters()
@@ -73,6 +73,11 @@ class Application extends SilexApplication
     {
         $this->register(new RoutingServiceProvider());
 
+        // Setup Sessions
+        $this->register(new SessionServiceProvider(), array(
+            'session.storage.save_path' => '/tmp/skeleton_sessions'
+        ));
+        
         // the form service
         $this->register(new TranslationServiceProvider(), array(
               'locale' => 'en',
@@ -111,10 +116,18 @@ class Application extends SilexApplication
         }
 
         $this['security.firewalls'] = array(
-            'default' => array(
+            'api' => array(
                 'stateless' => true,
-                'pattern' => '^/',
+                'anonymous' => false,
+                'pattern' => '^/api',
                 'http' => true,
+                'users' => $this->getUserSecurityProvider(),
+            ),
+            'default' => array(
+                'anonymous' => true,
+                'pattern' => '^/',
+                'form' => array('login_path' => '/login', 'check_path' => '/authentication/login_check'),
+                'logout' => array('logout_path' => '/logout'),
                 'users' => $this->getUserSecurityProvider(),
             ),
         );

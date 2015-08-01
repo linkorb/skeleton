@@ -2,6 +2,15 @@ frontpage:
     path: /
     defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::frontpageAction }
 
+# Authentication
+login:
+    path: /login
+    defaults:  { _controller: LinkORB\Skeleton\Controller\AuthenticationController::loginAction }
+    
+login_check:
+    path: /authentication/login_check
+
+# CRUD example
 things_index:
     path: /things
     defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::indexAction }
@@ -18,3 +27,9 @@ things_edit:
 things_delete:
     path: /things/{thingId}/delete
     defaults:  { _controller: LinkORB\Skeleton\Controller\ThingController::deleteAction }
+
+# API routes
+
+api_root:
+    path: /api/v1
+    defaults:  { _controller: LinkORB\Skeleton\Controller\ApiController::rootAction }
