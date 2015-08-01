@@ -42,7 +42,7 @@ vendor/bin/haigha fixtures:load test/fixture/example-data.yml mysql://username:p
 ### Start the server
 
 ```
-php -S 0.0.0.0:8080 -t web/
+php -S 0.0.0.0:8080 -t web/ web/index.php
 ```
 Now open [http://127.0.0.1:8080](http://127.0.0.1:8080) in your browser.
 
