@@ -21,7 +21,8 @@
         "symfony/translation": "~2.7",
         "twig/twig": ">=1.8,<2.0-dev",
         "symfony/twig-bridge": "~2.7",
-        "userbase/client": "~0.0"
+        "userbase/client": "~0.0",
+        "oyejorge/less.php": "~1.5"
     },
     "require-dev": {
         "dbtk/schema-loader": "~1.0",

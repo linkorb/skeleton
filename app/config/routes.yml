@@ -10,6 +10,12 @@ login:
 login_check:
     path: /authentication/login_check
 
+# Assets
+
+assets_style_css:
+    path: /assets/style.css
+    defaults:  { _controller: LinkORB\Skeleton\Controller\AssetsController::styleAction }
+
 # CRUD example
 things_index:
     path: /things
