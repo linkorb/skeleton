@@ -11,4 +11,3 @@ security:
             url: userbase_api_url
             username: userbase_username
             password: userbase_password
-pdo: mysql://user:pass@localhost/skeleton
