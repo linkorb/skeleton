@@ -25,11 +25,9 @@
         "oyejorge/less.php": "~1.5"
     },
     "require-dev": {
-        "dbtk/schema-loader": "~1.0",
-        "linkorb/database-manager": "dev-master",
+        "dbtk/schema-loader": "~2.0",
         "nelmio/alice": "dev-master",
-        "linkorb/haigha": "~1.0",
-        "beelab/bowerphp": "0.3.*@beta"
+        "linkorb/haigha": "~1.0"
     },
     "autoload": {
         "psr-4": {

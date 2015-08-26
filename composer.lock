@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "de3ce245386c30d527a5d7d3e97a7c11",
+    "hash": "fb348b62d118c2c259b26d2968f35497",
     "packages": [
         {
             "name": "oyejorge/less.php",
@@ -155,12 +155,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Silex.git",
-                "reference": "19de0cd21eee663362645de57bdd54854d7f4496"
+                "reference": "a3881a5a2fc7e0233307c8240d4adc909a559b49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Silex/zipball/19de0cd21eee663362645de57bdd54854d7f4496",
-                "reference": "19de0cd21eee663362645de57bdd54854d7f4496",
+                "url": "https://api.github.com/repos/silexphp/Silex/zipball/a3881a5a2fc7e0233307c8240d4adc909a559b49",
+                "reference": "a3881a5a2fc7e0233307c8240d4adc909a559b49",
                 "shasum": ""
             },
             "require": {
@@ -179,6 +179,7 @@
                 "doctrine/dbal": "~2.2",
                 "monolog/monolog": "~1.4,>=1.4.1",
                 "swiftmailer/swiftmailer": "5.*",
+                "symfony/asset": "~2.7",
                 "symfony/browser-kit": "~2.7",
                 "symfony/config": "~2.7",
                 "symfony/css-selector": "~2.7",
@@ -229,12 +230,12 @@
                     "email": "igor@wiedler.ch"
                 }
             ],
-            "description": "The PHP micro-framework based on the Symfony2 Components",
+            "description": "The PHP micro-framework based on the Symfony Components",
             "homepage": "http://silex.sensiolabs.org",
             "keywords": [
                 "microframework"
             ],
-            "time": "2015-07-31 06:31:44"
+            "time": "2015-08-24 09:40:42"
         },
         {
             "name": "symfony/config",
@@ -1239,25 +1240,29 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.19.0",
+            "version": "v1.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "edbeaf43b0a606cdaadc32a11d2673614a377b90"
+                "reference": "ca8d3aa90b6a01c82e07909fe815d6b443e75a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/edbeaf43b0a606cdaadc32a11d2673614a377b90",
-                "reference": "edbeaf43b0a606cdaadc32a11d2673614a377b90",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ca8d3aa90b6a01c82e07909fe815d6b443e75a23",
+                "reference": "ca8d3aa90b6a01c82e07909fe815d6b443e75a23",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.7"
             },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.19-dev"
+                    "dev-master": "1.21-dev"
                 }
             },
             "autoload": {
@@ -1292,7 +1297,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-07-31 13:45:26"
+            "time": "2015-08-26 08:58:31"
         },
         {
             "name": "userbase/client",
@@ -1339,286 +1344,36 @@
     ],
     "packages-dev": [
         {
-            "name": "beelab/bowerphp",
-            "version": "v0.3.4-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Bee-Lab/bowerphp.git",
-                "reference": "6c5611cedd54bc9c76a12d53a338f36c20382706"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Bee-Lab/bowerphp/zipball/6c5611cedd54bc9c76a12d53a338f36c20382706",
-                "reference": "6c5611cedd54bc9c76a12d53a338f36c20382706",
-                "shasum": ""
-            },
-            "require": {
-                "camspiers/json-pretty": "1.0.*",
-                "ext-fileinfo": "*",
-                "ext-zip": "*",
-                "knplabs/github-api": "1.4.*",
-                "php": ">=5.3.6",
-                "symfony/console": "~2.3",
-                "symfony/filesystem": "~2.1",
-                "symfony/finder": "~2.2",
-                "symfony/process": "~2.1",
-                "vierbergenlars/php-semver": "~3.0"
-            },
-            "require-dev": {
-                "ext-phar": "*",
-                "fabpot/php-cs-fixer": "~1.5",
-                "mockery/mockery": "~0.9.3",
-                "phpunit/phpunit": "4.*"
-            },
-            "bin": [
-                "bin/bowerphp"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Bowerphp\\": "src/Bowerphp"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Massimiliano Arione",
-                    "email": "massimiliano.arione@bee-lab.net"
-                },
-                {
-                    "name": "Mauro D'Alatri",
-                    "email": "mauro.dalatri@bee-lab.net"
-                },
-                {
-                    "name": "The Community",
-                    "homepage": "https://github.com/Bee-Lab/bowerphp/graphs/contributors"
-                }
-            ],
-            "description": "An implementation of bower in PHP",
-            "homepage": "http://bowerphp.org/",
-            "keywords": [
-                "dependency",
-                "frontend",
-                "package"
-            ],
-            "time": "2015-07-16 07:55:49"
-        },
-        {
-            "name": "camspiers/json-pretty",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/camspiers/json-pretty.git",
-                "reference": "2378ac3e8e798e9c55bd3c194238cde35af93817"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/camspiers/json-pretty/zipball/2378ac3e8e798e9c55bd3c194238cde35af93817",
-                "reference": "2378ac3e8e798e9c55bd3c194238cde35af93817",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "suggest": {
-                "pimple/pimple": "Useful for dependency injection"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Camspiers": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cam Spiers",
-                    "email": "cameron@heyday.co.nz",
-                    "homepage": "https://github.com/camspiers/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Provides support for json pretty printing in php 5.3",
-            "time": "2014-01-24 12:31:00"
-        },
-        {
-            "name": "crodas/class-info",
-            "version": "v0.1.17",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/crodas/ClassInfo.git",
-                "reference": "d8e15a64b2b31b5c3ebece582018eee86e9a2638"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/crodas/ClassInfo/zipball/d8e15a64b2b31b5c3ebece582018eee86e9a2638",
-                "reference": "d8e15a64b2b31b5c3ebece582018eee86e9a2638",
-                "shasum": ""
-            },
-            "require": {
-                "nikic/php-parser": "1.1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "crodas": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-4-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "César D. Rodas",
-                    "email": "crodas@php.net"
-                }
-            ],
-            "description": "Get classes and functions defined in a given file",
-            "time": "2015-05-02 15:25:50"
-        },
-        {
-            "name": "crodas/cli",
-            "version": "v0.1.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/crodas/cli.git",
-                "reference": "e7f57272375ff14355e45276f06bd75217c8d7f4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/crodas/cli/zipball/e7f57272375ff14355e45276f06bd75217c8d7f4",
-                "reference": "e7f57272375ff14355e45276f06bd75217c8d7f4",
-                "shasum": ""
-            },
-            "require": {
-                "crodas/file-util": "^0.1.14",
-                "crodas/notoj": "^1.0.5",
-                "symfony/console": "^2.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "crodas": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-4-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "César D. Rodas",
-                    "email": "crodas@php.net"
-                }
-            ],
-            "description": "Simple and silly abstraction on top of symfony/console",
-            "time": "2015-06-23 02:09:59"
-        },
-        {
-            "name": "crodas/file-util",
-            "version": "v0.1.19",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/crodas/FileUtils.git",
-                "reference": "57195fbfea90200361b7b04023687154a7c5dcd7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/crodas/FileUtils/zipball/57195fbfea90200361b7b04023687154a7c5dcd7",
-                "reference": "57195fbfea90200361b7b04023687154a7c5dcd7",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "crodas": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-4-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "César D. Rodas",
-                    "email": "crodas@php.net"
-                }
-            ],
-            "description": "Useful libraries to manipulate files",
-            "time": "2015-07-31 06:29:10"
-        },
-        {
-            "name": "crodas/notoj",
-            "version": "v1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/crodas/Notoj.git",
-                "reference": "fcc084097bd480710979f0b6b1b7b544ab6f9ac4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/crodas/Notoj/zipball/fcc084097bd480710979f0b6b1b7b544ab6f9ac4",
-                "reference": "fcc084097bd480710979f0b6b1b7b544ab6f9ac4",
-                "shasum": ""
-            },
-            "require": {
-                "crodas/class-info": "^0.1.11",
-                "crodas/file-util": "^0.1.18",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Notoj": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-4-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "César D. Rodas",
-                    "email": "crodas@php.net"
-                }
-            ],
-            "description": "Annotation parser. Uses reflection and provides cache out of the box.",
-            "time": "2015-07-31 05:31:53"
-        },
-        {
             "name": "dbtk/schema-loader",
-            "version": "v1.0.5",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbtk/schema-loader.git",
-                "reference": "e18519373403603060962e195d55bc06ee042d0d"
+                "reference": "f43bd43de9648b2c983c1f0015954300e3603a15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbtk/schema-loader/zipball/e18519373403603060962e195d55bc06ee042d0d",
-                "reference": "e18519373403603060962e195d55bc06ee042d0d",
+                "url": "https://api.github.com/repos/dbtk/schema-loader/zipball/f43bd43de9648b2c983c1f0015954300e3603a15",
+                "reference": "f43bd43de9648b2c983c1f0015954300e3603a15",
                 "shasum": ""
             },
             "require": {
-                "crodas/cli": "*",
-                "doctrine/dbal": "*"
+                "doctrine/dbal": "~2.5",
+                "linkorb/database-manager": "~2.0",
+                "symfony/console": "~2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6"
             },
             "bin": [
                 "bin/dbtk-schema-loader"
             ],
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DbTk\\SchemaLoader\\": "src/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
@@ -1627,7 +1382,7 @@
                 }
             ],
             "description": "Load Database schema from XML",
-            "time": "2015-07-31 07:53:02"
+            "time": "2015-08-16 13:23:02"
         },
         {
             "name": "doctrine/annotations",
@@ -2151,182 +1906,24 @@
             "time": "2015-05-29 06:29:14"
         },
         {
-            "name": "guzzle/guzzle",
-            "version": "v3.9.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle3.git",
-                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/0645b70d953bc1c067bbc8d5bc53194706b628d9",
-                "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.3",
-                "symfony/event-dispatcher": "~2.1"
-            },
-            "replace": {
-                "guzzle/batch": "self.version",
-                "guzzle/cache": "self.version",
-                "guzzle/common": "self.version",
-                "guzzle/http": "self.version",
-                "guzzle/inflection": "self.version",
-                "guzzle/iterator": "self.version",
-                "guzzle/log": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/plugin": "self.version",
-                "guzzle/plugin-async": "self.version",
-                "guzzle/plugin-backoff": "self.version",
-                "guzzle/plugin-cache": "self.version",
-                "guzzle/plugin-cookie": "self.version",
-                "guzzle/plugin-curlauth": "self.version",
-                "guzzle/plugin-error-response": "self.version",
-                "guzzle/plugin-history": "self.version",
-                "guzzle/plugin-log": "self.version",
-                "guzzle/plugin-md5": "self.version",
-                "guzzle/plugin-mock": "self.version",
-                "guzzle/plugin-oauth": "self.version",
-                "guzzle/service": "self.version",
-                "guzzle/stream": "self.version"
-            },
-            "require-dev": {
-                "doctrine/cache": "~1.3",
-                "monolog/monolog": "~1.0",
-                "phpunit/phpunit": "3.7.*",
-                "psr/log": "~1.0",
-                "symfony/class-loader": "~2.1",
-                "zendframework/zend-cache": "2.*,<2.3",
-                "zendframework/zend-log": "2.*,<2.3"
-            },
-            "suggest": {
-                "guzzlehttp/guzzle": "Guzzle 5 has moved to a new package name. The package you have installed, Guzzle 3, is deprecated."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Guzzle": "src/",
-                    "Guzzle\\Tests": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Guzzle Community",
-                    "homepage": "https://github.com/guzzle/guzzle/contributors"
-                }
-            ],
-            "description": "PHP HTTP client. This library is deprecated in favor of https://packagist.org/packages/guzzlehttp/guzzle",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2015-03-18 18:23:50"
-        },
-        {
-            "name": "knplabs/github-api",
-            "version": "1.4.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/KnpLabs/php-github-api.git",
-                "reference": "9010dbe21f4b0bae0edae26bbe031d7d91347938"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/9010dbe21f4b0bae0edae26bbe031d7d91347938",
-                "reference": "9010dbe21f4b0bae0edae26bbe031d7d91347938",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "guzzle/guzzle": "~3.7",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "knplabs/gaufrette": "Needed for optional Gaufrette cache"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Github\\": "lib/Github/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thibault Duplessis",
-                    "email": "thibault.duplessis@gmail.com",
-                    "homepage": "http://ornicar.github.com"
-                },
-                {
-                    "name": "KnpLabs Team",
-                    "homepage": "http://knplabs.com"
-                }
-            ],
-            "description": "GitHub API v3 client",
-            "homepage": "https://github.com/KnpLabs/php-github-api",
-            "keywords": [
-                "api",
-                "gh",
-                "gist",
-                "github"
-            ],
-            "time": "2015-07-03 14:59:20"
-        },
-        {
             "name": "linkorb/database-manager",
-            "version": "dev-master",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/linkorb/database-manager.git",
-                "reference": "0d2bcdcf6c860b8be910bdaba7a4271c58d8aea4"
+                "reference": "2d9c7911a7e9c420f4dabf20559e91591e5a9dc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/linkorb/database-manager/zipball/0d2bcdcf6c860b8be910bdaba7a4271c58d8aea4",
-                "reference": "0d2bcdcf6c860b8be910bdaba7a4271c58d8aea4",
+                "url": "https://api.github.com/repos/linkorb/database-manager/zipball/2d9c7911a7e9c420f4dabf20559e91591e5a9dc9",
+                "reference": "2d9c7911a7e9c420f4dabf20559e91591e5a9dc9",
                 "shasum": ""
             },
             "require": {
                 "symfony/console": "~2.5"
             },
             "require-dev": {
-                "doctrine/dbal": "~2.4",
-                "phpunit/dbunit": "~1.3",
-                "phpunit/phpunit": "~4.2"
+                "phpunit/phpunit": "~4.6"
             },
             "bin": [
                 "bin/database-manager"
@@ -2361,25 +1958,26 @@
                 "php",
                 "postgresql"
             ],
-            "time": "2015-07-27 11:12:23"
+            "time": "2015-08-16 13:26:56"
         },
         {
             "name": "linkorb/haigha",
-            "version": "v1.0.6",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/linkorb/haigha.git",
-                "reference": "86f396a098bac4c132fb150e0af4cd0db967a2a4"
+                "reference": "b032e16b687fed4e7f4fb3a1626cb7815d1c80e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/linkorb/haigha/zipball/86f396a098bac4c132fb150e0af4cd0db967a2a4",
-                "reference": "86f396a098bac4c132fb150e0af4cd0db967a2a4",
+                "url": "https://api.github.com/repos/linkorb/haigha/zipball/b032e16b687fed4e7f4fb3a1626cb7815d1c80e3",
+                "reference": "b032e16b687fed4e7f4fb3a1626cb7815d1c80e3",
                 "shasum": ""
             },
             "require": {
-                "linkorb/database-manager": "dev-master",
-                "nelmio/alice": "dev-master",
+                "linkorb/database-manager": "~2.0",
+                "nelmio/alice": "~2.0",
+                "php": ">=5.3",
                 "ramsey/uuid": "~2.0",
                 "symfony/console": "~2.4"
             },
@@ -2411,7 +2009,7 @@
                 "march hare",
                 "wonderland"
             ],
-            "time": "2015-07-23 09:45:04"
+            "time": "2015-08-16 13:28:57"
         },
         {
             "name": "nelmio/alice",
@@ -2419,12 +2017,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/alice.git",
-                "reference": "1256496ceda7a0f2ad0d0febb8c9c507c7addca8"
+                "reference": "28bf2a446e0c0d23d7c64f701eea0b05fc54d233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/alice/zipball/1256496ceda7a0f2ad0d0febb8c9c507c7addca8",
-                "reference": "1256496ceda7a0f2ad0d0febb8c9c507c7addca8",
+                "url": "https://api.github.com/repos/nelmio/alice/zipball/28bf2a446e0c0d23d7c64f701eea0b05fc54d233",
+                "reference": "28bf2a446e0c0d23d7c64f701eea0b05fc54d233",
                 "shasum": ""
             },
             "require": {
@@ -2469,52 +2067,7 @@
                 "orm",
                 "test"
             ],
-            "time": "2015-07-12 15:17:37"
-        },
-        {
-            "name": "nikic/php-parser",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "ac05ef6f95bf8361549604b6031c115f92f39528"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/ac05ef6f95bf8361549604b6031c115f92f39528",
-                "reference": "ac05ef6f95bf8361549604b6031c115f92f39528",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "lib/bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nikita Popov"
-                }
-            ],
-            "description": "A PHP parser written in PHP",
-            "keywords": [
-                "parser",
-                "php"
-            ],
-            "time": "2015-01-18 11:29:59"
+            "time": "2015-08-17 20:01:27"
         },
         {
             "name": "ramsey/uuid",
@@ -2581,165 +2134,13 @@
                 "uuid"
             ],
             "time": "2015-07-23 19:00:41"
-        },
-        {
-            "name": "symfony/finder",
-            "version": "v2.7.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Finder.git",
-                "reference": "ae0f363277485094edc04c9f3cbe595b183b78e4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/ae0f363277485094edc04c9f3cbe595b183b78e4",
-                "reference": "ae0f363277485094edc04c9f3cbe595b183b78e4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Finder Component",
-            "homepage": "https://symfony.com",
-            "time": "2015-07-09 16:07:40"
-        },
-        {
-            "name": "symfony/process",
-            "version": "v2.7.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Process.git",
-                "reference": "48aeb0e48600321c272955132d7606ab0a49adb3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/48aeb0e48600321c272955132d7606ab0a49adb3",
-                "reference": "48aeb0e48600321c272955132d7606ab0a49adb3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Process\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Process Component",
-            "homepage": "https://symfony.com",
-            "time": "2015-07-01 11:25:50"
-        },
-        {
-            "name": "vierbergenlars/php-semver",
-            "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vierbergenlars/php-semver.git",
-                "reference": "516bb3061577e60e9420cbecc479362d3ad8c7f1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vierbergenlars/php-semver/zipball/516bb3061577e60e9420cbecc479362d3ad8c7f1",
-                "reference": "516bb3061577e60e9420cbecc479362d3ad8c7f1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "simpletest/simpletest": "1.1.*"
-            },
-            "bin": [
-                "bin/semver",
-                "bin/update-versions"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "vierbergenlars\\SemVer\\": "src/",
-                    "vierbergenlars\\LibJs\\": "src/"
-                },
-                "classmap": [
-                    "src/vierbergenlars/SemVer/internal.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Lars Vierbergen",
-                    "email": "vierbergenlars@gmail.com"
-                }
-            ],
-            "description": "The Semantic Versioner for PHP",
-            "keywords": [
-                "semantic",
-                "semver",
-                "versioning"
-            ],
-            "time": "2015-05-02 19:28:54"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "silex/silex": 20,
-        "linkorb/database-manager": 20,
-        "nelmio/alice": 20,
-        "beelab/bowerphp": 10
+        "nelmio/alice": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema>
-    <table name="thing" primaryKey="id">
-        <column name="id" type="int" autoincrement="true"/>
-        <column name="name" type="varchar(64)" />
-        <column name="email" type="varchar(64)" />
+    <table name="thing">
+        <column name="id" type="integer" unsigned="true" autoincrement="true"/>
+        <column name="name" type="string" length="64" />
+        <column name="email" type="string" length="64" />
         <column name="description" type="text" />
+        <index name="primary" primary="true" columns="id" />
     </table>
 </schema>

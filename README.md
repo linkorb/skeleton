@@ -1,4 +1,5 @@
 # skeleton
+
 The LinkORB development project template
 
 This repository can be used to start new simple projects like API's or webapps.
@@ -12,12 +13,8 @@ Get PHP dependencies using Composer
 composer install
 ```
 
-Get javascript dependencies using BowerPHP:
+Get javascript dependencies using bower:
 
-```
-vendor/bin/bowerphp install
-```
-or use the standard bower npm app:
 ```
 bower install
 ```
@@ -27,9 +24,8 @@ bower install
 Copy config template files:
 ```
 cp app/config/parameters.yml.dist app/config/parameters.yml
-cp app/config/security.yml.dist app/config/security.yml
 ```
-Now edit `app/config/parameters.yml` and `app/config/security.yml` to your situation
+Now edit `app/config/parameters.yml` to your situation
 
 ### Initializing database schema
 
@@ -84,7 +80,7 @@ Have fun!
 *The LinkORB Engineering Team*
 
 ## License
-Please refer to the included LICENSE file
+Please refer to the included LICENSE.md file
 
 ## Brought to you by the LinkORB Engineering team
 
