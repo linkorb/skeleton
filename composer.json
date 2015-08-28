@@ -26,7 +26,6 @@
     },
     "require-dev": {
         "dbtk/schema-loader": "~2.0",
-        "nelmio/alice": "dev-master",
         "linkorb/haigha": "~1.0",
         "phpro/grumphp": "~0.1"
     },
