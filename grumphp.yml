@@ -1,7 +1,0 @@
-parameters:
-    git_dir: .
-    bin_dir: ./vendor/bin
-    tasks:
-        phpcsfixer: ~
-        phpcs:
-            standard: "PSR2"

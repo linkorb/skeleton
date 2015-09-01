@@ -4,13 +4,12 @@
     "homepage": "https://github.com/linkorb/skeleton",
     "keywords": ["linkorb", "template", "project", "php", "skeleton"],
     "type": "application",
-    "authors": [
-        {
-            "name": "LinkORB",
-            "email": "development@linkorb.com",
-            "role": "Development"
-        }
-    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "LinkORB",
+        "email": "engineering@linkorb.com",
+        "role": "Development"
+    }],
     "require": {
         "silex/silex": "2.0.*@dev",
         "symfony/yaml": "~2.6",
@@ -27,7 +26,7 @@
     "require-dev": {
         "dbtk/schema-loader": "~2.0",
         "linkorb/haigha": "~1.0",
-        "phpro/grumphp": "~0.1"
+        "linkorb/conventions-checker": "~1.0"
     },
     "autoload": {
         "psr-4": {
