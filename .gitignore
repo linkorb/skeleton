@@ -1,5 +1,6 @@
 # Parameters
 /app/config/parameters.yml
+/app/config/parameters.yml.bak
 
 # Managed by Composer
 /vendor/
@@ -7,6 +8,9 @@
 
 # Composer PHAR
 /composer.phar
+
+# Tests
+phpunit.xml
 
 # Mac
 .DS_Store

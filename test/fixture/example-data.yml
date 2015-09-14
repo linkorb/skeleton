@@ -1,16 +1,19 @@
 table.thing:
-    
+
     apple:
         id: 1
         name: Apple
+        email: apple@example.com
         description: The round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh.
 
     bike:
         id: 2
         name: Bicycle
+        email: bike@example.com
         description: A vehicle consisting of two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front wheel.
-        
+
     rabbit:
         id: 3
         name: Rabbit
+        email: rabbit@example.com
         description: Small mammals in the family Leporidae of the order Lagomorpha

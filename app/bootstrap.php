@@ -1,7 +1,6 @@
 <?php
 
 use LinkORB\Skeleton\Application;
-
 use Symfony\Component\HttpFoundation\Request;
 
 $app = new Application();
@@ -15,7 +14,6 @@ $app->before(function (Request $request, Application $app) {
     $token = $app['security.token_storage']->getToken();
     if ($token) {
         if ($request->getRequestUri()!='/login') {
-
             if ($token->getUser() == 'anon.') {
                 // visitor is not authenticated
             } else {

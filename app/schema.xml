@@ -5,6 +5,7 @@
         <column name="name" type="string" length="64" />
         <column name="email" type="string" length="64" />
         <column name="description" type="text" />
+
         <index name="primary" primary="true" columns="id" />
     </table>
 </schema>

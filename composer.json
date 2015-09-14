@@ -38,5 +38,10 @@
         "psr-4": {
             "LinkORB\\Skeleton\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LinkORB\\Skeleton\\Test\\": "test/"
+        }
     }
 }

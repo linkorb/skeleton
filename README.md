@@ -4,55 +4,20 @@ The LinkORB development project template
 
 This repository can be used to start new simple projects like API's or webapps.
 
+
 ## Getting started
 
-### Install dependencies:
+We assume that you have empty mysql root password on your developer machine.
 
-Get PHP dependencies using Composer
-```
-composer install
-```
+### Try
 
-Get javascript dependencies using bower:
+Run next command to try:
 
 ```
-bower install
+sudo ./bin/try.sh
 ```
 
-### Configuration
-
-Copy config template files:
-```
-cp app/config/parameters.yml.dist app/config/parameters.yml
-```
-Now edit `app/config/parameters.yml` to your situation
-
-### Initializing database schema
-
-The database schema is defined in `app/schema.xml`. You can load this schema in your database 
-using [DBTK Schema Loader](https://github.com/dbtk/schema-loader) (view it's README.md for more information)
-
-Note: Create the database before loading the schema.
-
-```
-vendor/bin/dbtk-schema-loader schema:load app/schema.xml mysql://username:password@localhost/dbname
-```
-
-### Loading example data / fixtures
-
-After initializing the database schema, you can load it with some example data through
-[linkorb/haigha](https://github.com/linkorb/haigha) (View Haigha's README.md for further information):
-
-```
-vendor/bin/haigha fixtures:load test/fixture/example-data.yml mysql://username:password@localhost/dbname
-```
-
-### Start the server
-
-```
-php -S 0.0.0.0:8080 -t web/ web/index.php
-```
-Now open [http://127.0.0.1:8080](http://127.0.0.1:8080) in your browser.
+Now open [http://127.0.0.1:8080](http://127.0.0.1:8080) in your browser and enjoy.
 
 ### Run console command
 
@@ -74,13 +39,25 @@ git init
 Now you can edit `app/config/routes.yml` to add new routes, and implement the controllers in `src/Controller/ExampleController.php`
 New templates for your route can be added to `templates/`
 
-If you need any further information, be sure to <a href="http://engineering.linkorb.com/contact">send us a message!</a>
+## Test
 
-Have fun!  
-*The LinkORB Engineering Team*
+Run:
+
+```
+cp phpunit.xml.dist phpunit.xml
+vendor/bin/phpunit
+```
 
 ## License
+
 Please refer to the included LICENSE.md file
+
+# Contact us
+
+If you need any further information, be sure to <a href="http://engineering.linkorb.com/contact">send us a message!</a>
+
+Have fun!
+*The LinkORB Engineering Team*
 
 ## Brought to you by the LinkORB Engineering team
 
