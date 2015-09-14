@@ -11,7 +11,7 @@
         "role": "Development"
     }],
     "require": {
-        "silex/silex": "2.0.*@dev",
+        "silex/silex": "2.0.x-dev#a3881a5a2fc7e0233307c8240d4adc909a559b49",
         "symfony/yaml": "~2.6",
         "symfony/config": "~2.6",
         "symfony/security": "~2.6",
