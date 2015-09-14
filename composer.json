@@ -26,8 +26,7 @@
     "require-dev": {
         "dbtk/schema-loader": "~2.0",
         "linkorb/haigha": "~1.0",
-        "phpro/grumphp": "dev-issue36-default-config-path",
-        "linkorb/conventions-checker": "~1.0"
+        "linkorb/conventions-checker": "~1.1"
     },
     "extra": {
         "grumphp": {
